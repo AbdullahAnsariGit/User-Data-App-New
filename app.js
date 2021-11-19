@@ -3,7 +3,7 @@ function userCreate() {
     let name = document.getElementById("name").value
     let email = document.getElementById("email").value
     let address = document.getElementById("address").value
-    axios.post('https://todo-appcs.herokuapp.com/user', {
+    axios.post('https://mongo-db-server-abd.herokuapp.com/user', {
         name, email, address
     })
         .then(function (response) {
@@ -29,7 +29,7 @@ function userCreate() {
 // GET ALL USER 
 function getAllUser() {
 
-    axios.get('https://todo-appcs.herokuapp.com/users')
+    axios.get('https://mongo-db-server-abd.herokuapp.com/users')
         .then(function (response) {
             console.log(response);
 
@@ -80,7 +80,7 @@ function editUser(_id, index) {
 function deleteUser(_id) {
     
 
-    axios.delete(`https://todo-appcs.herokuapp.com/user/${_id}`)
+    axios.delete(`https://mongo-db-server-abd.herokuapp.com/user/${_id}`)
         .then(function (response) {
             console.log(response);
 
@@ -105,7 +105,7 @@ function updateUser(_id) {
     const email = document.getElementById(`${_id}-email`).value
     const address = document.getElementById(`${_id}-address`).value
 
-    axios.put(`https://todo-appcs.herokuapp.com/user/${_id}`, { name, email, address })
+    axios.put(`ttps://mongo-db-server-abd.herokuapp.com/user/${_id}`, { name, email, address })
         .then(function (response) {
             console.log(response);
 
